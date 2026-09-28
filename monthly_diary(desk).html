@@ -1,0 +1,50 @@
+<!-- 1. FullCalendar 라이브러리 불러오기 -->
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
+
+<!-- 2. 달력이 들어갈 컨테이너 -->
+<div
+  id="calendar-container"
+  style="
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+  "
+>
+  <div id="calendar"></div>
+</div>
+
+<!-- 3. 달력 초기화 스크립트 -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var calendarEl = document.getElementById("calendar");
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: "dayGridMonth", // 월간 달력
+      locale: "en",
+      headerToolbar: {
+        left: "prev,next today",
+        center: "title",
+        right: "dayGridMonth,timeGridWeek",
+      },
+      events: [
+        // 스케줄 데이터 예시 (다이어리 작성한 날짜 등을 표출 가능)
+        {
+          title: "성수동 카페 어니언",
+          start: "2026-09-01",
+          color: "#ffb3ba", // 핑크색 포인트
+        },
+        {
+          title: "프릳츠 원서점",
+          start: "2026-08-16",
+          color: "#ffffba",
+        },
+      ],
+      dateClick: function (info) {
+        alert("선택한 날짜: " + info.dateStr);
+        // 날짜 클릭 시 해당 날짜 일기/다이어리 작성 팝업 띄우기 연동
+      },
+    });
+    calendar.render();
+  });
+</script>

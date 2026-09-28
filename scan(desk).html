@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pin it - Scan</title>
+    <link rel="stylesheet" href="./02_main(desk).css" />
+    <link rel="stylesheet" href="./scan(desk).css" />
+  </head>
+  <body>
+
+    <!-- 1. 상단 네비게이션 바 -->
+    <header class="navbar">
+      <div class="nav-left">
+        <a href="./02_main(desk).html">
+          <img src="../yedam.github.io/img/로고_이미지_글씨만.png" alt="Pin it" class="nav-logo" />
+        </a>
+        <nav class="nav-menu">
+          <a href="./map(desk).html" class="active">Map</a>
+          <a href="./scan(desk).html">Scan</a>
+          <a href="./sticker Book(desk).html">Sticker Book</a>
+          <a href="./diay_daily(desk).html">Diary</a>
+        </nav>
+      </div>
+      <div class="nav-right">
+        <a href="#" class="my-page-link">My Page</a>
+      </div>
+    </header>
+
+    <!-- 2. 스캔 & 업로드 메인 컨테이너 -->
+    <main class="scan-container">
+      
+      <!-- 업로드 영역 카드 -->
+      <div class="scan-card">
+        
+        <!-- 상단 별 장식 & Pin it 타이틀 통이미지 -->
+        <img src="./img/로고이미지(스캔).png" alt="Pin it Header" class="scan-header-img" />
+
+        <!-- 숨겨진 실제 파일 선택 태그 -->
+        <input type="file" id="file-upload" accept="image/*" class="file-input" />
+
+        <!-- SVG 기반 업로드 박스 및 텍스트 (클릭 시 파일 선택 창 오픈) -->
+        <label for="file-upload" class="upload-box-label">
+          <!-- 1) 노란색 박스 + 은색 + 버튼 SVG -->
+          <img src="../yedam.github.io/img/uplaod_box.svg" alt="Upload Box" class="upload-box-img" />
+          
+          <!-- 2) upload files 텍스트 SVG -->
+          <img src="../yedam.github.io/img/upload files.svg" alt="Upload Files" class="upload-text-img" />
+        </label>
+
+      </div>
+
+    </main>
+
+  </body>
+</html>

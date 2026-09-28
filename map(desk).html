@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pin it - Map</title>
+    <link rel="stylesheet" href="./02_main(desk).css" />
+    <link rel="stylesheet" href="./map(desk).css" />
+  </head>
+  <body>
+    <!-- 1. 상단 네비게이션 바 -->
+    <header class="navbar">
+      <div class="nav-left">
+        <a href="./02_main(desk).html">
+          <img
+            src="./img/로고_이미지_글씨만.png"
+            alt="Pin it"
+            class="nav-logo"
+          />
+        </a>
+        <nav class="nav-menu">
+          <a href="./map(desk).html" class="active">Map</a>
+          <a href="./scan(desk).html">Scan</a>
+          <a href="./sticker Book(desk).html">Sticker Book</a>
+          <a href="./diay_daily(desk).html">Diary</a>
+        </nav>
+      </div>
+      <div class="nav-right">
+        <a href="./02_main(desk).html" class="my-page-link">My Page</a>
+      </div>
+    </header>
+
+    <!-- 2. 지도 메인 영역 -->
+    <main class="map-viewport">
+      <!-- 왼쪽 검색 사이드바 (검색창 + 세로 검색 결과) -->
+      <aside class="search-sidebar">
+        <div class="sidebar-header">
+          <div class="search-input-wrapper">
+            <input
+              type="text"
+              id="keyword"
+              placeholder="장소를 검색하세요..."
+              class="map-search-input"
+            />
+            <button type="button" id="search-btn" class="search-btn">
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#666"
+                stroke-width="2.5"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- 주루룩 출력될 검색 결과 목록 -->
+        <ul id="placesList" class="places-list"></ul>
+      </aside>
+
+      <!-- 실제 지도가 표시되는 컨테이너 -->
+      <div id="map" class="map-container"></div>
+    </main>
+
+    <!-- 3. 지도 UI 2: 하단 3종 컨트롤 바 (발견 / Scan / 북마크) -->
+    <footer class="map-bottom-bar">
+      <!-- 1) 왼쪽: 발견 핀 버튼 -->
+      <button type="button" class="map-icon-btn discover-btn">
+        <img src="./img/발견_1 최종.svg" alt="Discover Pin" />
+      </button>
+
+      <!-- 2) 중앙: Scan 버튼 -->
+      <a href="./scan(desk).html" class="map-icon-btn scan-btn">
+        <img src="./img/scan icon.svg" alt="Scan" />
+      </a>
+
+      <!-- 3) 오른쪽: 북마크 리본 버튼 -->
+      <button type="button" class="map-icon-btn bookmark-btn">
+        <img src="./img/북마크3 찐최종.svg" alt="Bookmark Ribbon" />
+      </button>
+    </footer>
+
+    <!-- 4. 카카오 지도 API 라이브러리 및 커스텀 JS 연동 -->
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=272fc4350ddd243d2d9224bfce7da6b7&libraries=services"
+    ></script>
+    <script src="./map(desk).js"></script>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pin it - Diary</title>
+    <link rel="stylesheet" href="./02_main(desk).css" />
+    <link rel="stylesheet" href="./diay_daily(desk).css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- 1. 상단 네비게이션 바 -->
+    <header class="navbar">
+      <div class="nav-left">
+        <a href="./02_main(desk).html">
+          <img src="../yedam.github.io/img/로고_이미지_글씨만.png" alt="Pin it" class="nav-logo" />
+        </a>
+        <nav class="nav-menu">
+          <a href="./map(desk).html" class="active">Map</a>
+          <a href="./scan(desk).html">Scan</a>
+          <a href="./sticker Book(desk).html">Sticker Book</a>
+          <a href="./diay_daily(desk).html">Diary</a>
+        </nav>
+      </div>
+      <div class="nav-right">
+        <a href="#" class="my-page-link"> My Page</a>
+      </div>
+    </header>
+
+    <!-- 2. 다이어리 메인 컨테이너 -->
+    <main class="diary-container">
+      
+      <!-- 서브 헤더 (타이틀 & daily 표시) -->
+      <div class="diary-header">
+        <h1 class="diary-title">Diary-☆ </h1>
+        <button type="button" class="save-img-btn">
+    <img src="./img/save-8.png" alt="Save" />
+  </button>
+          </div>
+
+        
+</div>
+
+      <!-- 다이어리 내지 속지 프레임 -->
+      <div class="diary-paper">
+        
+        <!-- 날짜 입력 섹션 -->
+        <div class="date-row">
+          <span class="date-label">date</span>
+          <div class="date-inputs">
+            <input type="text" maxlength="4" placeholder="YYYY" class="date-input year" />
+            <span class="slash">/</span>
+            <input type="text" maxlength="2" placeholder="MM" class="date-input month" />
+            <span class="slash">/</span>
+            <input type="text" maxlength="2" placeholder="DD" class="date-input day" />
+          </div>
+        </div>
+
+        <!-- 구분선 1 -->
+        <div class="line"></div>
+
+        <!-- 제목 입력 섹션 -->
+        <div class="title-row">
+          <span class="title-label">Title</span>
+          <input type="text" placeholder="title" class="title-input" />
+        </div>
+
+        <!-- 구분선 2 -->
+        <div class="line bold-line"></div>
+
+        <!-- 체크리스트 섹션 (4개) -->
+        <div class="todo-list">
+          <div class="todo-item">
+            <input type="checkbox" id="todo1" class="custom-radio" />
+            <label for="todo1"></label>
+            <input type="text" placeholder="List 1" class="todo-input" />
+          </div>
+          <div class="todo-item">
+            <input type="checkbox" id="todo2" class="custom-radio" />
+            <label for="todo2"></label>
+            <input type="text" placeholder="List 2" class="todo-input" />
+          </div>
+          <div class="todo-item">
+            <input type="checkbox" id="todo3" class="custom-radio" />
+            <label for="todo3"></label>
+            <input type="text" placeholder="List 3" class="todo-input" />
+          </div>
+          <div class="todo-item">
+            <input type="checkbox" id="todo4" class="custom-radio" />
+            <label for="todo4"></label>
+            <input type="text" placeholder="List 4" class="todo-input" />
+          </div>
+        </div>
+
+        <!-- 구분선 3 -->
+        <div class="line"></div>
+
+        <!-- 본문 자유 메모 입력 영역 -->
+        <div class="content-area">
+          <textarea placeholder="오늘의 기록을 자유롭게 작성해보세요." class="diary-textarea"></textarea>
+        </div>
+
+        <!-- 구분선 4 (하단) -->
+        <div class="line bottom-line"></div>
+
+      </div>
+
+      <!-- 하단 핸들 네임 -->
+      <div class="footer-handle">@dam.dam</div>
+
+    </main>
+
+  </body>
+</html>

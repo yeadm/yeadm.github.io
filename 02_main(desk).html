@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pin it - 메인</title>
+    <link rel="stylesheet" href="./02_main(desk).css" />
+  </head>
+  <body>
+    <!-- 1. 상단 노란색 네비게이션 바 -->
+    <header class="navbar">
+      <div class="nav-left">
+        <a href="./02_main(desk).html">
+          <img src="./img/로고_이미지_글씨만.png" alt="Pin it" class="nav-logo" />
+        </a>
+        <nav class="nav-menu">
+          <a href="./map(desk).html">Map</a>
+          <a href="./scan(desk).html">Scan</a>
+          <a href="./sticker Book(desk).html">Sticker Book</a>
+          <a href="./diay_daily(desk).html">Diary</a>
+        </nav>
+      </div>
+      <div class="nav-right">
+        <a href="#" class="my-page-link">My Page</a>
+      </div>
+    </header>
+
+    <!-- 2. 메인 컨텐츠 영역 -->
+    <main class="main-container">
+      <!-- 프로필 & RECENT PINS 섹션 -->
+      <section class="profile-section">
+        <!-- 프로필 카드 -->
+        <div class="profile-card">
+          <div class="profile-frame-wrapper">
+            <img
+              src="./img/마이핀-2.png"
+              alt="My pin_logo"
+              class="star-badge"
+            />
+            <div class="yellow-profile-box">
+              <img src="./img/프로필.png" alt="Profile" class="profile-img" />
+            </div>
+          </div>
+          <h2 class="user-handle">@yedam.Byun</h2>
+        </div>
+
+        <!-- RECENT PINS 카드 -->
+        <div class="recent-pins-card">
+          <div class="pins-info">
+            <h3 class="pins-title">RECENT PINS</h3>
+            <ul class="pins-list">
+              <li>
+                <span>카페 어니언 성수</span><span class="dots"></span
+                ><span class="date">2026.09.01</span>
+              </li>
+              <li>
+                <span>테디스오픈 성수</span><span class="dots"></span
+                ><span class="date">2026.08.28</span>
+              </li>
+              <li>
+                <span>프릴츠 원서점</span><span class="dots"></span
+                ><span class="date">2026.08.16</span>
+              </li>
+              <li>
+                <span>북촌한옥마을</span><span class="dots"></span
+                ><span class="date">2026.08.16</span>
+              </li>
+              <li>
+                <span>잠원 한강공원</span><span class="dots"></span
+                ><span class="date">2026.08.09</span>
+              </li>
+            </ul>
+            <p class="pins-count"><strong>12/50</strong> pins collected</p>
+          </div>
+
+          <div class="badge-area">
+            <img
+              src="./img/도장 최종+.png"
+              alt="Verified Ribbon Badge"
+              class="badge-img"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. 메인 보드판 섹션 -->
+      <section class="main-board-wrapper">
+        <img
+          src="./img/메뉴 즐겨찾기 최종.svg"
+          alt="Main Board"
+          class="board-bg-img"
+        />
+
+        <div class="tab-click-layer">
+          <a href="#" class="tab-link diary-link">Diary</a>
+          <a href="#" class="tab-link sticker-link">Sticker Book</a>
+          <a href="#" class="tab-link map-link">Map</a>
+        </div>
+      </section>
+    </main>
+    <!-- .main-container 끝 -->
+
+    <!-- 5. 하단 고정 하얀색 바 -->
+    <div class="bottom-bar"></div>
+
+    <!-- Scan 버튼----->
+    <div class="bottom-bar">
+      <a href="scan.html" class="map-icon-btn scan-btn">
+        <img src="../yedam.github.io/img/scan icon.svg" alt="Scan" />
+      </a>
+    </div>
+  </body>
+</html>

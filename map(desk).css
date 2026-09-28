@@ -1,0 +1,161 @@
+/* 지도 화면 전체 영역 (네비게이션 50px + 하단바 70px 차감) */
+.map-viewport {
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 120px);
+  overflow: hidden;
+  background-color: #e2f9fb;
+}
+
+/* 지도 API 100% 렌더링 영역 */
+.map-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* 1. 왼쪽 고정 세로 사이드바 패널 */
+.search-sidebar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 320px;
+  max-height: calc(100% - 40px);
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* 사이드바 상단 검색창 */
+.sidebar-header {
+  padding: 12px 15px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 6px;
+  padding: 0 10px;
+  border: 1px solid #dddddd;
+}
+
+.map-search-input {
+  width: 100%;
+  height: 38px;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 13px;
+  color: #333333;
+}
+
+.search-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 2. 주루룩 나열되는 왼쪽 검색 결과 리스트 */
+.places-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.places-list .item {
+  padding: 12px 15px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.places-list .item:hover {
+  background-color: #f8f9fa;
+}
+
+.places-list .item h5 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #111111;
+  margin-bottom: 3px;
+}
+
+.places-list .item span {
+  display: block;
+  font-size: 11px;
+  color: #666666;
+  line-height: 1.4;
+}
+
+.places-list .item .jibun {
+  color: #888888;
+}
+
+.places-list .item .tel {
+  color: #007bff;
+  margin-top: 3px;
+}
+
+/* 3. 하단 컨트롤 바 (3종 SVG 버튼) */
+.map-bottom-bar {
+  position: relative;
+  width: 100vw;
+  height: 70px;
+  background-color: #ffffff;
+  border-top: 1.5px solid #777;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  z-index: 10;
+}
+
+.map-icon-btn {
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease;
+}
+
+.map-icon-btn:hover {
+  transform: translateY(-2px);
+}
+
+.map-icon-btn:active {
+  transform: translateY(1px);
+}
+
+.discover-btn img {
+  height: 80px;
+  width: auto;
+}
+
+.scan-btn img {
+  height: 65px;
+  width: auto;
+}
+
+.bookmark-btn img {
+  height: 65px;
+  width: auto;
+}

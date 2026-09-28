@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pin it - log in</title>
+    <!-- 외부 CSS 스타일시트 연결 -->
+    <link rel="stylesheet" href="./01_login(desk).css" />
+  </head>
+  <body>
+
+    <!-- 화면 중앙 전체 껍데기 (그리드 적용 대상) -->
+    <div class="login-wrapper">
+      
+      <!-- 1. 왼쪽: 로고 영역 -->
+      <div class="logo-area">
+        <img src="./img/로고_최종.png" alt="Pin it 로고" class="logo-img" />
+      </div>
+
+      <!-- 2. 오른쪽: 로그인 폼 영역 -->
+      <form action="./02_main(desk).html" method="GET" class="form-area">
+        
+        <div class="input-group">
+          <label for="user-id">ID</label>
+          <input type="text" id="user-id" name="id" required />
+        </div>
+
+        <div class="input-group">
+          <label for="user-pw">Password</label>
+          <input type="password" id="user-pw" name="password" required />
+        </div>
+
+        <!-- 글자 Log-in은 완전히 제거하고 img만 남기기 -->
+<button type="submit" class="img-btn-login">
+  <img src="../yedam.github.io/img/로그인 버튼.png" alt="Log-in" />
+</button>
+
+</form>
+
+
+    </div>
+
+    <!--제작자 로고-->
+<div class="c">@dam.dam</div>
+
+  </body>
+</html>
